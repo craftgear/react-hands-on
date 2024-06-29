@@ -1,8 +1,4 @@
-# React + Vite
+# React入門 ハンズオン
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[こちらのハンズオン](https://www.notion.so/React-defef1f533974500b9c820534ce793ea) の内容をコードに起こしたものです。
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
