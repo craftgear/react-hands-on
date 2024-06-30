@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest",
-    "test-ct": "playwright test -c playwright-ct.config.cjs"
+    "test-ct": "playwright test -c playwright-ct.config.js"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.48.0",
