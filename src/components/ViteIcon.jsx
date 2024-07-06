@@ -7,7 +7,7 @@ export const ViteIcon = () => {
       <a href="https://vitejs.dev" target="_blank">
         <img src={viteLogo} className="logo" alt="Vite logo" />
       </a>
-      <div className={style['text-bold']}>
+      <div className={style.blue}>
         アイコンをクリックするとViteのサイトを開きます
       </div>
     </div>
