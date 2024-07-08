@@ -11,9 +11,7 @@ import { useAtom } from 'jotai';
 import { counterAtom } from '../state/counterAtom';
 
 export const Note = memo(({ now }) => (
-  <p>
-    Edit <code>src/App.jsx</code> and save to test HMR at {now}
-  </p>
+  <p className="p-1 text-3xl">Current time is {now}</p>
 ));
 
 export const Counter = ({ children }) => {

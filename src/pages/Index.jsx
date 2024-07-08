@@ -2,11 +2,13 @@ import { ViteIcon } from '../components/ViteIcon';
 import { ReactIcon } from '../components/ReactIcon';
 import { Greeting } from '../components/Greeting';
 import { Counter, Note } from '../components/Counter';
+// import { ObjectCounter } from '../components/ObjectCounter';
+// import { CounterWithReducer } from '../components/CounterWithReducer';
 
 export const Index = () => {
   return (
     <>
-      <div>
+      <div className="p-5 flex justify-around">
         <ViteIcon />
         <ReactIcon />
       </div>

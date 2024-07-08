@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="navbar flex justify-around">
+      <div className="flex justify-around">
         <Link className="btn btn-ghost text-xl" href="/">
           Home
         </Link>
