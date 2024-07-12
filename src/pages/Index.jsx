@@ -1,7 +1,7 @@
 import { ViteIcon } from '../components/ViteIcon';
 import { ReactIcon } from '../components/ReactIcon';
 import { Greeting } from '../components/Greeting';
-import { Counter, Note } from '../components/Counter';
+import { CounterWithAtom, Note } from '../components/CounterWithAtom';
 // import { ObjectCounter } from '../components/ObjectCounter';
 // import { CounterWithReducer } from '../components/CounterWithReducer';
 
@@ -16,9 +16,9 @@ export const Index = () => {
       <Greeting names={['React', 'Vite']}>
         <p>さよならjQuery</p>
       </Greeting>
-      <Counter>
+      <CounterWithAtom>
         <Note />
-      </Counter>
+      </CounterWithAtom>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

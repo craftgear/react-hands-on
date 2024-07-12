@@ -1,11 +1,21 @@
-import { memo, useState, useMemo, useCallback, useRef, useEffect } from 'react';
+import {
+  memo,
+  useState,
+  useReducer,
+  useMemo,
+  useCallback,
+  useRef,
+  useEffect,
+} from 'react';
+import { useAtom } from 'jotai';
+import { counterAtom } from '../state/counterAtom';
 
 export const Note = memo(({ now }) => (
   <p className="p-1 text-3xl">Current time is {now}</p>
 ));
 
-export const Counter = ({ children }) => {
-  const [count, setCount] = useState(0);
+export const CounterWithAtom = ({ children }) => {
+  const [count, setCount] = useAtom(counterAtom);
 
   const now = useMemo(() => {
     return Date.now();
