@@ -1,26 +1,29 @@
 import "./App.css";
-import { ViteIcon } from "./ViteIcon";
-import { ReactIcon } from "./ReactIcon";
-import { Greeting } from "./Greeting";
-import { Counter } from "./Counter";
-import { Note } from "./Note";
+import { Link, Switch, Route } from "wouter";
+import { Index } from "./pages/Index";
+import { Todos } from "./pages/Todos";
+import { NotFound } from "./components/NotFound";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+const client = new QueryClient();
 
 function App() {
   return (
-    <>
-      <ViteIcon />
-      <ReactIcon />
-      <h1>Vite + React</h1>
-      <Greeting names={["React", "Vite"]}>
-        <p>さよなら jQuery</p>
-      </Greeting>
-      <Counter>
-        <Note />
-      </Counter>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <QueryClientProvider client={client}>
+      <div className="navbar flex justify-around w-full">
+        <Link className="btn btn-ghost" href="/">
+          Home
+        </Link>
+        <Link className="btn btn-ghost" href="/todos">
+          Todos
+        </Link>
+      </div>
+      <Switch>
+        <Route path="/" component={Index} />
+        <Route path="/todos" component={Todos} />
+        <Route component={NotFound} />
+      </Switch>
+    </QueryClientProvider>
   );
 }
 
