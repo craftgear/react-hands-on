@@ -33,15 +33,15 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], colorScheme: 'dark' },
     },
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'], colorScheme: 'dark' },
     },
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop Safari'], colorScheme: 'dark' },
     },
   ],
 });
