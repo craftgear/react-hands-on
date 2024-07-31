@@ -1,4 +1,3 @@
-import { useCallback } from 'react';
 import { atom, useAtom, useAtomValue } from 'jotai';
 import { selectAtom } from 'jotai/utils';
 
@@ -9,6 +8,9 @@ export const useCounter = () => useAtom(counterAtom);
 // object
 const appStateAtom = atom({ count: 0, message: '10未満' });
 export const useAppState = () => useAtom(appStateAtom);
+
+const messageSelector = selectAtom(appStateAtom, (state) => state.message);
+export const useMessage = () => useAtomValue(messageSelector);
 
 export const useCount = () => {
   const [{ count }, setState] = useAtom(appStateAtom);
@@ -21,6 +23,3 @@ export const useCount = () => {
 
   return [count, set];
 };
-
-const messageSelector = selectAtom(appStateAtom, (state) => state.message);
-export const useMessage = () => useAtomValue(messageSelector);
