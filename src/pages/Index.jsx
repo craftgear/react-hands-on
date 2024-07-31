@@ -1,9 +1,10 @@
 import { ViteIcon } from '../components/ViteIcon';
 import { ReactIcon } from '../components/ReactIcon';
 import { Greeting } from '../components/Greeting';
-import { CounterWithAtom, Note } from '../components/CounterWithAtom';
 // import { ObjectCounter } from '../components/ObjectCounter';
 // import { CounterWithReducer } from '../components/CounterWithReducer';
+import { CounterWithAtom, Note } from '../components/CounterWithAtom';
+import { CounterWithSelectAtom } from '../components/CounterWithSelectAtom';
 
 export const Index = () => {
   return (
@@ -19,6 +20,8 @@ export const Index = () => {
       <CounterWithAtom>
         <Note />
       </CounterWithAtom>
+      <CounterWithSelectAtom />
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

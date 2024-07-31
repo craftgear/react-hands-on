@@ -1,24 +1,19 @@
 import { memo, useMemo, useCallback, useRef, useEffect } from 'react';
-// import { useAtom } from 'jotai';
-// import { counterAtom } from '../state/counterAtom';
-import { useCounter } from '../state/counterAtom';
+import { useCount } from '../state/counterAtom';
 
 export const Note = memo(({ now }) => (
   <p className="p-1 text-3xl">Current time is {now}</p>
 ));
 
-export const CounterWithAtom = ({ children }) => {
-  // const [count, setCount] = useAtom(counterAtom);
-  const [count, setCount] = useCounter();
+export const CounterWithSelectAtom = ({ children }) => {
+  // const [state, setState] = useAppState();
+  const [count, setCount] = useCount();
 
   const now = useMemo(() => {
     return Date.now();
   }, []);
 
-  const handleClick = useCallback(
-    () => setCount((prevCount) => prevCount + 1),
-    []
-  );
+  const handleClick = useCallback(() => setCount(), []);
 
   const ref = useRef();
   useEffect(() => {
