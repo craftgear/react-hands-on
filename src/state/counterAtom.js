@@ -9,8 +9,8 @@ export const useCounter = () => useAtom(counterAtom);
 const appStateAtom = atom({ count: 0, message: '10未満' });
 export const useAppState = () => useAtom(appStateAtom);
 
-const messageSelector = selectAtom(appStateAtom, (state) => state.message);
-export const useMessage = () => useAtomValue(messageSelector);
+const messageAtom = selectAtom(appStateAtom, (state) => state.message);
+export const useMessage = () => useAtomValue(messageAtom);
 
 export const useCount = () => {
   const [{ count }, setState] = useAtom(appStateAtom);
