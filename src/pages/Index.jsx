@@ -1,9 +1,10 @@
 import { ViteIcon } from '../components/ViteIcon';
 import { ReactIcon } from '../components/ReactIcon';
 import { Greeting } from '../components/Greeting';
+import { Note } from '../components/Note';
 // import { ObjectCounter } from '../components/ObjectCounter';
 // import { CounterWithReducer } from '../components/CounterWithReducer';
-import { CounterWithAtom, Note } from '../components/CounterWithAtom';
+import { CounterWithAtom } from '../components/CounterWithAtom';
 import { CounterWithSelectAtom } from '../components/CounterWithSelectAtom';
 
 export const Index = () => {

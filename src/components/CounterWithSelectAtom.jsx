@@ -1,10 +1,6 @@
 import { memo, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useCount } from '../state/counterAtom';
 
-export const Note = memo(({ now }) => (
-  <p className="p-1 text-3xl">Current time is {now}</p>
-));
-
 export const CounterWithSelectAtom = ({ children }) => {
   // const [state, setState] = useAppState();
   const [count, setCount] = useCount();

@@ -1,8 +1,5 @@
-import { memo, useState, useMemo, useCallback, useRef, useEffect } from 'react';
-
-export const Note = memo(({ now }) => (
-  <p className="p-1 text-3xl">Current time is {now}</p>
-));
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
+import { Note } from './Note';
 
 export const Counter = ({ children }) => {
   const [count, setCount] = useState(0);

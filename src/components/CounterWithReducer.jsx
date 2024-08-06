@@ -1,8 +1,4 @@
-import { memo, useReducer } from 'react';
-
-export const Note = memo(({ now }) => (
-  <p className="p-1 text-3xl">Current time is {now}</p>
-));
+import { useReducer } from 'react';
 
 const initialState = {
   value: 0,
