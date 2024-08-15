@@ -1,17 +1,10 @@
 import { ViteIcon } from '../components/ViteIcon';
 import { ReactIcon } from '../components/ReactIcon';
 import { Greeting } from '../components/Greeting';
-<<<<<<< HEAD:src/pages/Index.jsx
-import { Note } from '../components/Note';
-// import { ObjectCounter } from '../components/ObjectCounter';
-// import { CounterWithReducer } from '../components/CounterWithReducer';
-import { CounterWithAtom } from '../components/CounterWithAtom';
-=======
-import { Counter } from '../components/Counter';
+// import { Counter } from '../components/Counter';
 // import { ObjectCounter } from '../components/ObjectCounter';
 // import {CounerWithReducer} from '../components/CounterWithReducer';
 // import { CounterWithAtom } from '../components/CounterWithSelectAtom';
->>>>>>> typescript:hands-on/src/pages/Index.tsx
 import { CounterWithSelectAtom } from '../components/CounterWithSelectAtom';
 
 export const Index = () => {
@@ -25,16 +18,7 @@ export const Index = () => {
       <Greeting names={['React', 'Vite']}>
         <p>React is a JavaScript library for building user interfaces.</p>
       </Greeting>
-<<<<<<< HEAD:src/pages/Index.jsx
-      <CounterWithAtom>
-        <Note />
-      </CounterWithAtom>
       <CounterWithSelectAtom />
-
-=======
-      <Counter></Counter>
-      <CounterWithSelectAtom />
->>>>>>> typescript:hands-on/src/pages/Index.tsx
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
