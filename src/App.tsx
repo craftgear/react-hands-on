@@ -4,6 +4,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { Switch, Route, Link } from 'wouter';
 import { Index } from './pages/Index';
 import { Todos } from './pages/Todos';
+import { NotFound } from './pages/NotFound';
 
 const client = new QueryClient();
 
@@ -21,6 +22,7 @@ function App() {
       <Switch>
         <Route path="/" component={Index} />
         <Route path="/todos" component={Todos} />
+        <Route component={NotFound} />
       </Switch>
     </QueryClientProvider>
   );
