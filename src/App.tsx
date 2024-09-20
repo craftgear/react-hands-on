@@ -1,25 +1,26 @@
+import { Route, Switch, Link } from 'wouter';
+
 import './App.css';
-import { ReactIcon } from './components/ReactIcon';
-import { ViteIcon } from './components/ViteIcon';
-import { Greeting } from './components/Greeting';
-import { Counter } from './components/Counter';
-// import { ObjectCounter } from './components/ObjectCounter';
-// import { CounterWithReducer } from './components/CounterWithReducer';
-import { Note } from './components/Note';
+import { Index } from './pages/Index';
+import { Todos } from './pages/Todos';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
     <>
-      <div>
-        <ViteIcon />
-        <ReactIcon />
+      <div className="navbar flex justify-around w-full">
+        <Link className="btn btn-ghost" href="/">
+          Home
+        </Link>
+        <Link className="btn btn-ghost" href="/todos">
+          Todos
+        </Link>
       </div>
-      <h1>Vite + React</h1>
-      <Greeting names={['React', 'Vite']} />
-      <Counter />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Switch>
+        <Route path="/" component={Index} />
+        <Route path="/todos" component={Todos} />
+        <Route component={NotFound} />
+      </Switch>
     </>
   );
 }
