@@ -7,8 +7,9 @@ export const Todos = () => {
   const { mutate } = usePatchTodo();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log('----- e', e);
     const id = e.target.value;
-    mutate({ id: Number(id), done: true });
+    mutate({ id: Number(id), done: e.target.checked });
   };
 
   if (isPending) {
