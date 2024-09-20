@@ -1,12 +1,13 @@
-import { useState } from 'react';
 import './App.css';
 import { ReactIcon } from './components/ReactIcon';
 import { ViteIcon } from './components/ViteIcon';
 import { Greeting } from './components/Greeting';
+import { Counter } from './components/Counter';
+// import { ObjectCounter } from './components/ObjectCounter';
+// import { CounterWithReducer } from './components/CounterWithReducer';
+import { Note } from './components/Note';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
@@ -15,17 +16,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <Greeting names={['React', 'Vite']} />
-      <div className="card flex flex-col items-center">
-        <button
-          className="btn btn-primary w-1/2 text-xl"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <Counter />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
