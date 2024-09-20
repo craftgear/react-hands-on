@@ -12,7 +12,7 @@ export const useMessage = () => useAtomValue(messageAtom);
 
 export const useCount = (): [number, () => void] => {
   const [{ count }, setState] = useAtom(appStateAtom);
-  const increment = () => {
+  const increment = () =>
     setState((prev) => {
       return {
         ...prev,
@@ -20,7 +20,6 @@ export const useCount = (): [number, () => void] => {
         message: prev.count + 1 < 10 ? '10未満' : '10以上',
       };
     });
-  };
 
   return [count, increment];
 };
