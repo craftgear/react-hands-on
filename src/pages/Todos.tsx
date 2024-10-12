@@ -30,7 +30,7 @@ export const Todos = () => {
             type="checkbox"
             id={`${id}`}
             value={id}
-            defaultChecked={done}
+            checked={done ? true : false}
             onChange={handleChange}
           />
           <label htmlFor={`${id}`}>{title}</label>
