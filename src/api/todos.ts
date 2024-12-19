@@ -63,3 +63,11 @@ export const usePatchTodo = () => {
     onSuccess: () => queryClient.invalidateQueries({ queryKey }),
   });
 };
+
+export const usePostTodo = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: post,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey }),
+  });
+};

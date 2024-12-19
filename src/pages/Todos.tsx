@@ -1,5 +1,6 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEvent } from "react";
 import { useGetTodos, usePatchTodo } from "../api/todos";
+import { TodoForm } from "../components/TodoForm";
 
 export const Todos = () => {
   const { data, isPending, error } = useGetTodos();
@@ -22,6 +23,7 @@ export const Todos = () => {
   return (
     <div>
       <h1>Todos</h1>
+      <TodoForm />
       {data?.map(({ id, title, done }) => (
         <div key={id}>
           <input
